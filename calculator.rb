@@ -5,6 +5,7 @@ class StringCalculator
     delimiter = ','
     number_list = numbers.split(delimiter)
 
+    numbers.gsub!("\n", delimiter)
     number_list.map(&:to_i).reduce(0, :+)
   end
 end
